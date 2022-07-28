@@ -1,0 +1,5 @@
+You will need to have installed docker prior to starting any of the setup obviously.
+
+Enable SSH on your Synology box and run the following as root replacing IPs and interfaces as required:
+
+docker network create -d macvlan -o parent=eth1 --subnet=192.168.1.1/24 --gateway=192.168.1.1 --ip-range=192.168.1.5/32 PiHole
